@@ -176,8 +176,9 @@ class PubMed(object):
         # Loop over the articles and construct article objects
         for article in root.iter("PubmedArticle"):
             yield PubMedArticle(xml_element=article)
-        for book in root.iter("PubmedBookArticle"):
-            yield PubMedBookArticle(xml_element=book)
+    
+        # for book in root.iter("PubmedBookArticle"):
+            # yield PubMedBookArticle(xml_element=book)
 
     def _getArticleIds(self: object, query: str, max_results: int) -> list:
         """ Helper method to retrieve the article IDs for a query.
