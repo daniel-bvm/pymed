@@ -1,16 +1,13 @@
 import os
 from setuptools import setup
 from setuptools import find_packages
-from pymed.version import __version__
-
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-
 setup(
     name="pymed",
-    version=__version__,
+    version='1.0.0',
     author="Gijs Wobben",
     author_email="gijswobben@gmail.com",
     description=("Python library for access to PubMed"),
